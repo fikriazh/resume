@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Px437_IBM_VGA8';
+    src: url(font.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    width: 100%;
+    font-size: 24px;
+}
+@media (max-width: 680px) {
+    html {
+    font-size: 16px;
+}
+}@media (max-height: 600px) {
+    html {
+    font-size: 16px;
+}
+}body {
+    background-color: #2d2a2e;
+    font-family: 'Px437_IBM_VGA8',  monospace;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    color: #fcfcfa;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: normal;
+}
+div.container {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+div.content {
+    position: fixed;
+    -webkit-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 8rem 0;
+    text-align: left;
+    max-width: 100%;
+    width: 42ch;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p {
+    position: relative;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+canvas {
+    -webkit-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    position: fixed;
+    left: 0;
+    pointer-events: none;
+}
+canvas.top {
+    top: 0;
+    margin-top: -1rem;
+}
+canvas.bottom {
+    bottom: 0;
+    margin-top: 1rem;
+}
+p {
+    margin: 0 0 1rem;
+}
+p:last-child {
+    margin: 0;
+}
+p.copyright {
+    color: #939293;
+}
+b {
+    font-weight: normal;
+    color: #78dce8;
+}
+a {
+    color: #ff6188;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    display: block;
+}
+a[href] {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffd866;
+    padding: 1rem 1ch;
+}
+a[href]:before {
+    content: '';
+    background-color: #ff6188;
+    display: block;
+    left: 1px;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    position: absolute;
+    z-index: -1;
+}
+h1 {
+    color: #78dce8;
+    margin: 0 auto 1rem;
+}
+h2 {
+    color: #939293;
+    margin: 0;
+}
+h3 {
+    color: #939293;
+    margin: 0 0 1rem;
+}
+h3:before {
+    content: counter(section) ".0 — ";
+    color: #939293;
+}
+h4 {
+    color: #2d2a2e;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #ffd866;
+    -webkit-box-shadow: inset 0 -1px 0 #2d2a2e, inset 0 -.5rem 0 #ffd866;
+    box-shadow: inset 0 -1px 0 #2d2a2e, inset 0 -.5rem 0 #ffd866;
+}
+h5 {
+    color: #ffd866;
+    margin: 1rem 0 1rem;
+}
+ul {
+    counter-reset: project;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    counter-increment: project;
+    margin: 0 0 4rem;
+    padding: 2rem 3ch;
+    position: relative;
+    display: block;
+}
+ul li:before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    right: 1px;
+    margin-right: 1ch;
+    border: 0.5ch solid #ab9df2;
+    z-index: -1;
+    -webkit-box-shadow: 1ch 1rem 0 #ab9df2;
+    box-shadow: 1ch 1rem 0 #ab9df2;
+    background-color: #2d2a2e;
+}
+ul li:last-child {
+    margin: 0 0 8rem;
+}
+section {
+    counter-increment: section;
+    margin-bottom: 4rem;
+}
+section:nth-child(2) {
+    counter-reset: section;
+}
+p.measure {
+    display: inline-block;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+div.image-logo {
+    height: 4rem;
+    margin-bottom: 4rem;
+    background-image: url(https://monokai.nl/images/logo.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+svg.monokai-icon {
+    width: 1em;
+    height: 1em;
+    fill: #939293;
+}
